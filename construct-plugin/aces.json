@@ -1,0 +1,76 @@
+﻿{
+	"$schema": "../aces.schema.json",
+	
+	"youtube-playables": {
+		"conditions": [
+			{
+				"id": "in-playables-env",
+				"scriptName": "InPlayablesEnv"
+			}
+		],
+		"expressions": [
+			{
+				"id": "sdk-version",
+				"expressionName": "SDKVersion",
+				"returnType": "string"
+			}, {
+				"id": "language",
+				"expressionName": "Language",
+				"returnType": "string"
+			}
+		]
+	},
+
+	"engagement": {
+		"conditions": [{
+			"id": "on-send-score-success",
+			"scriptName": "OnSendScoreSuccess",
+			"isTrigger": true
+		}, {
+			"id": "on-send-score-error",
+			"scriptName": "OnSendScoreError",
+			"isTrigger": true
+		}],
+		"actions": [{
+			"id": "send-score",
+			"scriptName": "SendScore",
+			"isAsync": true,
+			"params": [{ "id": "score", "type": "number" }]
+		}]
+	},
+
+	"game": {
+		"conditions": [{
+			"id": "on-save-success",
+			"scriptName": "OnSaveSuccess",
+			"isTrigger": true
+		}, {
+			"id": "on-save-error",
+			"scriptName": "OnSaveError",
+			"isTrigger": true
+		}, {
+			"id": "on-load-success",
+			"scriptName": "OnLoadSuccess",
+			"isTrigger": true
+		}, {
+			"id": "on-load-error",
+			"scriptName": "OnLoadError",
+			"isTrigger": true
+		}],
+		"actions": [{
+			"id": "save",
+			"scriptName": "Save",
+			"isAsync": true,
+			"params": [{ "id": "data", "type": "string" }]
+		}, {
+			"id": "load",
+			"scriptName": "Load",
+			"isAsync": true
+		}],
+		"expressions": [{
+			"id": "save-data",
+			"expressionName": "SaveData",
+			"returnType": "string"
+		}]
+	}
+}

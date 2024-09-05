@@ -1,0 +1,31 @@
+﻿{
+	"$schema": "../plugin.addon.schema.json",
+	
+	"is-c3-addon": true,
+	"sdk-version": 2,
+	"min-construct-version": "r406",
+	"type": "plugin",
+	"name": "YouTube Playables",
+	"id": "YouTube_Playables",
+	"version": "1.0.0.0",
+	"author": "Scirra",
+	"website": "https://developers.google.com/youtube/gaming/playables",
+	"documentation": "https://developers.google.com/youtube/gaming/playables",
+	"description": "Integrates the YouTube Playables SDK.",
+	"editor-scripts": [
+						"plugin.js"
+					],
+	"file-list": [
+		"c3runtime/main.js",
+		"c3runtime/instance.js",
+		"c3runtime/conditions.js",
+		"c3runtime/actions.js",
+		"c3runtime/expressions.js",
+		"c3runtime/domSide.js",
+		"lang/en-US.json",
+		"aces.json",
+		"addon.json",
+		"icon.svg",
+		"plugin.js"
+	]
+}

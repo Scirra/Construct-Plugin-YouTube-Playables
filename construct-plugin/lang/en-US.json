@@ -1,0 +1,102 @@
+﻿{
+	"$schema": "../../plugin.lang.schema.json",
+
+	"languageTag": "en-US",
+	"fileDescription": "Strings for the YouTube Playables plugin.",
+	"text": {
+		"plugins": {
+			"youtube_playables": {
+				"name": "YouTube Playables",
+				"description": "Integrates the YouTube Playables SDK.",
+				"help-url": "https://developers.google.com/youtube/gaming/playables",
+				"properties": {
+				},
+				"aceCategories": {
+					"youtube-playables": "YouTube Playables",
+					"engagement": "Engagement",
+					"game": "Game"
+				},
+				"conditions": {
+					"in-playables-env": {
+						"list-name": "In Playables environment",
+						"display-text": "In Playables environment",
+						"description": "True if the game is running as a playable."
+					},
+					"on-send-score-success": {
+						"list-name": "On send score success",
+						"display-text": "On send score success",
+						"description": "Triggered after 'Send score' completes successfully."
+					},
+					"on-send-score-error": {
+						"list-name": "On send score error",
+						"display-text": "On send score error",
+						"description": "Triggered after 'Send score' fails to complete."
+					},
+					"on-save-success": {
+						"list-name": "On save success",
+						"display-text": "On save success",
+						"description": "Triggered after 'Save' completes successfully."
+					},
+					"on-save-error": {
+						"list-name": "On save error",
+						"display-text": "On save error",
+						"description": "Triggered after 'Save' fails to complete."
+					},
+					"on-load-success": {
+						"list-name": "On load success",
+						"display-text": "On load success",
+						"description": "Triggered after 'Load' completes successfully."
+					},
+					"on-load-error": {
+						"list-name": "On load error",
+						"display-text": "On load error",
+						"description": "Triggered after 'Load' fails to complete."
+					}
+				},
+				"actions": {
+					"send-score": {
+						"list-name": "Send score",
+						"display-text": "Send score [b]{0}[/b]",
+						"description": "Send the current player score to the YouTube Playables service.",
+						"params": {
+							"score": {
+								"name": "Score",
+								"desc": "The score value expressed as an integer."
+							}
+						}
+					},
+					"save": {
+						"list-name": "Save",
+						"display-text": "Save [i]{0}[/i]",
+						"description": "Save a string of the current game state to the YouTube cloud.",
+						"params": {
+							"data": {
+								"name": "Data",
+								"desc": "A string of the game state to save."
+							}
+						}
+					},
+					"load": {
+						"list-name": "Load",
+						"display-text": "Load",
+						"description": "Load a string of the current game state previously saved to the YouTube cloud."
+					}
+				},
+				"expressions": {
+					"sdk-version": {
+						"description": "The YouTube Playables SDK version.",
+						"translated-name": "SDKVersion"
+					},
+					"language": {
+						"description": "Current language as provided by YouTube Playables platform.",
+						"translated-name": "Language"
+					},
+					"save-data": {
+						"description": "In 'On load success', the string that was loaded.",
+						"translated-name": "SaveData"
+					}
+				}
+			}
+		}
+	}
+}
